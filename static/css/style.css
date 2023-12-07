@@ -60,7 +60,7 @@ br.clear {
 	justify-content: space-between;
 }
 @font-face {
-    font-family: 'GT-Eesti';
+    font-family: 'GT-Eesti1';
     src: url("../fonts/GT-Eesti-Pro-Text-Light.woff2") format("woff2");
     src: url("../fonts/GT-Eesti-Pro-Text-Light.woff") format("woff"), url("../fonts/GT-Eesti-Pro-Text-Light.ttf") format("truetype");
     font-weight: 400;
@@ -68,7 +68,7 @@ br.clear {
 }
 
 @font-face {
-    font-family: 'GT-Eesti';
+    font-family: 'GT-Eesti2';
     src: url("../fonts/GT-Eesti-Pro-Text-Regular.woff2") format("woff2");
     src: url("../fonts/GT-Eesti-Pro-Text-Regular.woff") format("woff"), url("../fonts/GT-Eesti-Pro-Text-Regular.ttf") format("truetype");
     font-weight: 500;
@@ -76,7 +76,7 @@ br.clear {
 }
 
 @font-face {
-    font-family: 'GT-Eesti';
+    font-family: 'GT-Eesti3';
     src: url("../fonts/GT-Eesti-Pro-Text-Medium.woff2") format("woff2");
     src: url("../fonts/GT-Eesti-Pro-Text-Medium.woff") format("woff"), url("../fonts/GT-Eesti-Pro-Text-Medium.ttf") format("truetype");
     font-weight: 600;
@@ -84,7 +84,7 @@ br.clear {
 }
 
 @font-face {
-    font-family: 'GT-Eesti';
+    font-family: 'GT-Eesti4';
     src: url("../fonts/GT-Eesti-Pro-Text-Bold.woff2") format("woff2");
     src: url("../fonts/GT-Eesti-Pro-Text-Bold.woff") format("woff"), url("../fonts/GT-Eesti-Pro-Text-Bold.ttf") format("truetype");
     font-weight: 700;
@@ -134,31 +134,44 @@ br.clear {
 
 #main_page .home .left .file_upload { 
     animation: slide-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    width: 70%;
 }
 
 #main_page .home .left .file_upload h1 { 
     font-size: 25px;
     color: #fff;
-    margin:  25px 0;
+    margin:  25px 0px;
 }
 
 #main_page .home .left .file_upload .email_input { 
     background-color: #fff;
     padding: 15px ;
     border-radius: 50px;
+    font-size: 20px;
+
 }
 
 #main_page .home .left .file_upload .email_input label { 
-    
+    width: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#main_page .home .left .file_upload .email_input label img{ 
+    display: block;
+    width: 100%;
 }
 
-#main_page .home .left .file_upload .email_input #email { 
+#main_page .home .left .file_upload .email_input label #email { 
     background-color: #fff;
+    margin-left: 20px;
+    font-size: 22px;
 }
 
 #main_page .home .left .file_upload .file_upload { 
-    margin:  25px 15px ;
+    margin:  25px 0px;
     color: #fff;
+    font-size: 18px;
 }
 
 #main_page .home .left .file_upload .file_upload label { 
@@ -178,7 +191,7 @@ br.clear {
 }
 
 #main_page .home .left .file_upload .submit_button input { 
-    font-size: 20px;
+    font-size: 25px;
     color: #fff;
 }
 
@@ -205,4 +218,290 @@ br.clear {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #ff7e6b;
+   ;
+}
+
+header h1 { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #000;
+    font-family: 'GT-Eesti1';
+    font-size: 30px;
+    
+}
+
+
+header h1 .logo { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50px;
+}
+
+header h1 .logo img {
+    display: block;
+    width: 100%; 
+    
+}
+
+header .search { 
+    width: 35%;
+    border: 2px solid #000;
+    border-radius: 10px ;
+    
+}
+header .search div{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+header .search div {
+    width: 50px;
+}
+header .search div img{ 
+    display: block;
+    width: 100%;
+}
+
+header .search div input {
+    font-size: 20px;
+    margin-left: 25px;
+    color: #000;
+    &::placeholder { 
+        color: #000; 
+}
+}
+
+header nav { 
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul { 
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul li:last-child { 
+    margin-left: 35px;
+}
+
+header nav ul li a { 
+    display: block;
+    font-family: 'GT-Eesti1';
+    font-size: 20px;
+}
+header nav ul li a img {
+    display: block;
+    width: 100%;
+    border-radius: 50px;
+}
+header div ul li a { 
+    display: block;
+    width: 50px;
+    font-size: 25px;
+}
+
+
+#contact { 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+#contact .contact_table { 
+    width: 65%;
+    padding: 25px 50px;
+}
+#contact .contact_table h1 { 
+    font-size: 25px;
+    padding: 25px 50px;
+}
+
+#contact .contact_table .heading { 
+    
+}
+
+#contact .contact_table .heading ul { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+#contact .contact_table .heading ul:hover {
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    cursor: pointer;
+}
+#contact .contact_table .heading ul.head:hover {
+    background-color: #fff;
+}
+#contact .contact_table .heading div.line {
+    border-bottom: 1px solid #c4c7c5;
+    margin: 0px 15px;
+
+}
+#contact .contact_table .heading ul li { 
+    width: 40%;
+    text-align: left;
+    margin-left: 100px;
+}
+#contact .contact_table .heading ul li div{ 
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#contact .contact_table .heading ul li div img{ 
+    display: block;
+    width: 15%;
+    margin-right: 25px;
+}
+
+#contact .contact_table .heading ul li a { 
+    font-size: 18px;
+    font-family: 'GT-Eesti1';
+}   
+#contact .contact_table .heading ul.head { 
+   
+}
+#contact .contact_table .heading ul.head li { 
+   
+}
+#contact .contact_table .heading ul.head li a{ 
+    font-size: 23px;
+    font-family: 'GT-Eesti2';
+    color: #c4c7c5;
+}
+#right_side { 
+    width: 40%;
+    text-align: center;
+    padding: 100px 35px;
+}
+
+#right_side .profile { 
+    width: 35%;
+    margin: 0px auto;
+}
+
+#right_side .profile img { 
+    display: block;
+    width: 100%;
+}
+
+#right_side h2 { 
+    font-size: 25px;
+    margin: 15px 09;
+}
+
+#right_side .info h3 { 
+    font-size: 20px;
+    margin-right: 70%;
+}
+
+#right_side .info { 
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    padding: 30px 20px ;
+    margin-top: 20px;
+    color: #9B9B9B;
+    font-family: 'GT-Eesti1';
+}
+
+#right_side .info .phone_number { 
+    
+}
+
+#right_side .info .phone_number .Phone_icon { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 0 30px;
+}
+
+#right_side .info .phone_number .Phone_icon a { 
+    
+}
+
+#right_side .info .phone_number .Phone_icon a img { 
+    
+
+}
+
+#right_side .info .phone_number .Phone_icon h5 { 
+    font-size: 20px;
+    color: #000;
+    font-family: 'GT-Eesti2';
+}
+
+#right_side .info .phone_number .Phone_icon .message_icon { 
+
+}
+
+#right_side .info .phone_number .Phone_icon .message_icon a { 
+
+}
+
+#right_side .info .phone_number .Phone_icon .message_icon a img { 
+
+}
+
+#right_side .info .email { 
+    
+}
+
+#right_side .info .email .emial_icon { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 0 30px;
+}
+
+#right_side .info .email .emial_icon a { 
+    width: 30px;
+   display: block;
+}
+
+#right_side .info .email .emial_icon a img { 
+    display: block;
+    width: 100%;
+}
+
+#right_side .info .email .emial_icon h5 { 
+    font-size: 20px;
+    color: #000;
+    font-family: 'GT-Eesti2';
+
+}
+
+#right_side .info .email .emial_icon .mail_icon { 
+
+}
+
+#right_side .info .email .emial_icon .mail_icon a { 
+    width: 30px;
+}
+
+#right_side .info .email .emial_icon .mail_icon a img { 
+    display: block;
+    width: 100%;
 }
