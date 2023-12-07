@@ -1,0 +1,208 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-weight: normal;
+	text-decoration: none;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ol, ul {
+	list-style: none;
+}
+del {
+	text-decoration: line-through;
+}
+body {
+	font-family: "GT-Eesti", Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #000;
+	overflow-x: hidden;
+	min-width: 320px;
+	font-weight: 500;
+}
+input,textarea,select{
+	font-family: "GT-Eesti", Arial, Helvetica, sans-serif;
+	font-weight: 500;
+}
+
+a{
+	color: #000;
+}
+.thumb{
+	display: block;
+}
+.thumb img{
+	display: block;
+	width:100%;
+}
+p{
+	line-height:1.6em;
+	font-size: 16px;
+	font-family: "GT-Eesti", Arial;
+	font-weight: 500;
+	color: #000;
+}
+.hidden{
+	display:none;
+}
+br.clear {
+	clear: both;
+	line-height: 0;
+}
+
+.flex-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+@font-face {
+    font-family: 'GT-Eesti';
+    src: url("../fonts/GT-Eesti-Pro-Text-Light.woff2") format("woff2");
+    src: url("../fonts/GT-Eesti-Pro-Text-Light.woff") format("woff"), url("../fonts/GT-Eesti-Pro-Text-Light.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'GT-Eesti';
+    src: url("../fonts/GT-Eesti-Pro-Text-Regular.woff2") format("woff2");
+    src: url("../fonts/GT-Eesti-Pro-Text-Regular.woff") format("woff"), url("../fonts/GT-Eesti-Pro-Text-Regular.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'GT-Eesti';
+    src: url("../fonts/GT-Eesti-Pro-Text-Medium.woff2") format("woff2");
+    src: url("../fonts/GT-Eesti-Pro-Text-Medium.woff") format("woff"), url("../fonts/GT-Eesti-Pro-Text-Medium.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'GT-Eesti';
+    src: url("../fonts/GT-Eesti-Pro-Text-Bold.woff2") format("woff2");
+    src: url("../fonts/GT-Eesti-Pro-Text-Bold.woff") format("woff"), url("../fonts/GT-Eesti-Pro-Text-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal
+}
+::placeholder {
+  color: #9B9B9B;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #9B9B9B;
+}
+
+::-ms-input-placeholder {
+  color: #9B9B9B;
+}
+
+#main_page { 
+    display: flex;
+    justify-content: space-between;
+}
+
+#main_page .left { 
+    width: 40%;
+    background-color: #ff7e6b;
+    
+}
+
+#main_page { 
+    height: 100vh;
+}
+
+#main_page .home { 
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#main_page .home .left { 
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#main_page .home .left .file_upload { 
+    animation: slide-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+#main_page .home .left .file_upload h1 { 
+    font-size: 25px;
+    color: #fff;
+    margin:  25px 0;
+}
+
+#main_page .home .left .file_upload .email_input { 
+    background-color: #fff;
+    padding: 15px ;
+    border-radius: 50px;
+}
+
+#main_page .home .left .file_upload .email_input label { 
+    
+}
+
+#main_page .home .left .file_upload .email_input #email { 
+    background-color: #fff;
+}
+
+#main_page .home .left .file_upload .file_upload { 
+    margin:  25px 15px ;
+    color: #fff;
+}
+
+#main_page .home .left .file_upload .file_upload label { 
+
+}
+
+#main_page .home .left .file_upload .file_upload #file { 
+
+}
+
+#main_page .home .left .file_upload .submit_button { 
+    border: 3px solid #000;
+    padding: 15px ;
+    border-radius: 50px;
+    text-align: center;
+   
+}
+
+#main_page .home .left .file_upload .submit_button input { 
+    font-size: 20px;
+    color: #fff;
+}
+
+#main_page .home .right { 
+    width: 60%;
+}
+
+#main_page .home .right div { 
+    width: 75%;
+    margin-left: 100px;
+}
+
+#main_page .home .right div img { 
+    display: block;
+    width: 100%;
+    
+}
+@keyframes slide-bottom {
+    0% {
+        transform: translatex(-500px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
