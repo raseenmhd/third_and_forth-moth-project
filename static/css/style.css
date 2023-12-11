@@ -309,8 +309,9 @@ header nav ul li a {
     font-size: 20px;
 }
 header nav ul li a:hover { 
-    color: #000;
+    color: #4a2f2f;
     font-family: 'GT-Eesti3';
+    
 }
 header nav ul li a img {
     display: block;

@@ -13,18 +13,10 @@
                 <section class="left">
                     <div class="file_upload">
                         <h1>please upload your contacts file </h1>
-                        <h2>(  file should be in .xlsx format and should contain name ,phone and email columns  )
+                        <h2>(  file should be in .xlsx format and <br> should contain Name ,Phone and Email columns  )
                         </h2>
-                        <form action="" method="post" enctype="multipart/form-data">
+                        <form id="Upload_file" method="post" action="{% url 'web:index' %}" enctype="multipart/form-data">
                             {% csrf_token %}
-                            <!-- <div class="name">
-                                <label for="name" >name : </label>
-                                <input type="name" id="name" name="name">
-                            </div>
-                            <div class="email_input">
-                                <label for="email" >email : </label>
-                                <input type="email" id="email" name="email">
-                            </div> -->
                             <div class="file_upload">
                                 <label for="myfile">File:</label>
                                 <input type="file" id="myfile" name="myfile">
@@ -42,5 +34,7 @@
                 </section>
             </section>
         </section>
+        <script src="{% static 'js/scripts.js' %}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>
 </html>

@@ -16,10 +16,13 @@
             Contacts
         </h1>
         <div class="search">
-            <div>
-                <img src="{% static 'images/search.png'%}" alt="">
-                <input type="text" name="search" id="search" placeholder="search">
-            </div>
+            <form action="">
+            {% csrf_token %}
+                <div>
+                    <img src="{% static 'images/search.png'%}" alt="">
+                    <input type="text" name="search" id="search" placeholder="search">
+                </div>
+            </form>
         </div>
         <nav>
             <ul>
@@ -29,7 +32,7 @@
                 <ul>
                     <li>
                         <a href="">
-                            <img src="{% static 'images/profile.jpg'%}" alt="profile">
+                            <img src="{% static 'images/profile.jpg'%}"  title="profile"  alt="profile image">
                         </a>
                     </li>
                 </ul>
@@ -51,7 +54,7 @@
                 </ul>
                 <div class="line"></div>
                 {% for user in users %}
-                <ul>
+                <ul class="contact-info" data-contact-id="{{ user.id }}">
                     <li>
                         <div>
                             <img src="{% static 'images/profile.jpg'%}" alt="">
@@ -62,6 +65,9 @@
                     <li>
                         <a href="">{{user.email}}</a>
                     </li>
+                    <li class="none" style="display: none;">
+                        <a href="">{{user.phone}}</a>
+                    </li>
                     <a href="{% url 'web:set_delete' user.id %}">
                         <!-- <img src="{% static 'images/delete.png'%}" alt=""> -->
                     </a>
@@ -70,41 +76,47 @@
             </div>
         </div>
         <section id="right_side">
-            <div class="profile">
-                <img src="{% static 'images/profile.jpg'%}" alt="profile">
-            </div>
-            <h2>Arshad raseen</h2>
-            
-            <div class="info">
-                <h3>Contact info :</h3>
-                <div class="phone_number">
-                    <div class="Phone_icon">
-                        <a href="#">
-                            <img src="{% static 'images/call.png'%}" alt="">
-                        </a>
-                       <h5>+ 91 7907798919</h5>
-                       <div class="message_icon">
+            <!-- Start of changes -->
+            <div id="selected_user_details" style="display: none;">
+                <div class="profile">
+                    <img src="{% static 'images/profile.jpg'%}" alt="profile" id="profile_image">
+                </div>
+                <h2 id="selected_user_name"></h2>
+                
+                <div class="info">
+                    <h3>Contact info :</h3>
+                    <div class="phone_number">
+                        <div class="Phone_icon">
                             <a href="#">
-                                 <img src="{% static 'images/message.png'%}" alt="">
+                                <img src="{% static 'images/call.png'%}" alt="">
                             </a>
-                       </div>
+                           <h5 id="selected_user_phone"></h5>
+                           <div class="message_icon">
+                                <a href="#">
+                                     <img src="{% static 'images/message.png'%}" alt="">
+                                </a>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="email">
+                        <div class="emial_icon">
+                            <a href="#">
+                                <img src="{% static 'images/email2.png'%}" alt="">
+                            </a>
+                           <h5 id="selected_user_email"></h5>
+                           <div class="mail_icon">
+                                <a href="#">
+                                     <img src="{% static 'images/send_mail.png'%}" alt="">
+                                </a>
+                           </div>
+                        </div>
                     </div>
                 </div>
-                <div class="email">
-                    <div class="emial_icon">
-                        <a href="#">
-                            <img src="{% static 'images/email2.png'%}" alt="">
-                        </a>
-                       <h5>raseen404@gmail.com</h5>
-                       <div class="mail_icon">
-                            <a href="#">
-                                 <img src="{% static 'images/send_mail.png'%}" alt="">
-                            </a>
-                       </div>
-                    </div>
-                </div>
             </div>
+            <!-- End of changes -->
         </section>
     </section>
+    <script src="{% static 'js/scripts.js' %}"></script>
 </body>
+
 </html>

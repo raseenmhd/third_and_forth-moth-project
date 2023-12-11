@@ -3,13 +3,9 @@ from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from django.contrib.auth.models import User
 from django.http.response import HttpResponseRedirect
-from django.shortcuts import render, get_object_or_404
-from django.contrib.auth.models import User 
 
 from .models import user
 
-from .resources import PersonResource
-from tablib import Dataset
 import pandas as pd
 
 
@@ -17,6 +13,7 @@ def clean_phone(phone):
     return ''.join(filter(str.isdigit, str(phone)))
 
 def index(request):
+    
     if request.method == 'POST' and request.FILES['myfile']:
         excel_file = request.FILES['myfile']
         df = pd.read_excel(excel_file)
@@ -44,11 +41,16 @@ def index(request):
             missing_columns = [col for col in required_columns if col not in df.columns]
             return HttpResponse(f"Missing columns: {missing_columns}", status=400)
     
-    return render(request, 'index.html') 
-
+    context = {
+            "title":"Contact | Home",
+    }
+    return render(request, 'index.html', context=context) 
 
 def users(request):
     users = user.objects.filter(is_delete=False)
+    search = request.GET.get('search')
+    if search:
+        users = user.objects.filter(name__icontains=search)
     context = {
             "title":"Contact | users",
             "users":users,
