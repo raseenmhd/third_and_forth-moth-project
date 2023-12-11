@@ -23,8 +23,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">All Contacts</a></li>
+                <li><a href="{% url 'web:index' %}">Upload Another File</a></li>
             </ul>
             <div>
                 <ul>
@@ -51,126 +50,23 @@
                     
                 </ul>
                 <div class="line"></div>
+                {% for user in users %}
                 <ul>
                     <li>
                         <div>
                             <img src="{% static 'images/profile.jpg'%}" alt="">
-                            <a href="">raseen</a>
+                            <a href="">{{user.name}}</a>
                         </div>
                         
                     </li>
                     <li>
-                        <a href="">raseen404@gmail.com</a>
+                        <a href="">{{user.email}}</a>
                     </li>
-                    <a href="#">
-                        <img src="{% static 'images/call.png'%}" alt="">
+                    <a href="{% url 'web:set_delete' user.id %}">
+                        <!-- <img src="{% static 'images/delete.png'%}" alt=""> -->
                     </a>
                 </ul>
-                <ul>
-                    <li>
-                        <div>
-                            <img src="{% static 'images/profile.jpg'%}" alt="">
-                            <a href="">raseen</a>
-                        </div>
-                        
-                    </li>
-                    <li>
-                        <a href="">raseen404@gmail.com</a>
-                    </li>
-                    <a href="#">
-                        <img src="{% static 'images/call.png'%}" alt="">
-                    </a>
-                </ul>
-                <ul>
-                    <li>
-                        <div>
-                            <img src="{% static 'images/profile.jpg'%}" alt="">
-                            <a href="">raseen</a>
-                        </div>
-                        
-                    </li>
-                    <li>
-                        <a href="">raseen404@gmail.com</a>
-                    </li>
-                    <a href="#">
-                        <img src="{% static 'images/call.png'%}" alt="">
-                    </a>
-                </ul>
-                <ul>
-                    <li>
-                        <div>
-                            <img src="{% static 'images/profile.jpg'%}" alt="">
-                            <a href="">raseen</a>
-                        </div>
-                        
-                    </li>
-                    <li>
-                        <a href="">raseen404@gmail.com</a>
-                    </li>
-                    <a href="#">
-                        <img src="{% static 'images/call.png'%}" alt="">
-                    </a>
-                </ul>
-                <ul>
-                    <li>
-                        <div>
-                            <img src="{% static 'images/profile.jpg'%}" alt="">
-                            <a href="">raseen</a>
-                        </div>
-                        
-                    </li>
-                    <li>
-                        <a href="">raseen404@gmail.com</a>
-                    </li>
-                    <a href="#">
-                        <img src="{% static 'images/call.png'%}" alt="">
-                    </a>
-                </ul>
-                <ul>
-                    <li>
-                        <div>
-                            <img src="{% static 'images/profile.jpg'%}" alt="">
-                            <a href="">raseen</a>
-                        </div>
-                        
-                    </li>
-                    <li>
-                        <a href="">raseen404@gmail.com</a>
-                    </li>
-                    <a href="#">
-                        <img src="{% static 'images/call.png'%}" alt="">
-                    </a>
-                </ul>
-                <ul>
-                    <li>
-                        <div>
-                            <img src="{% static 'images/profile.jpg'%}" alt="">
-                            <a href="">raseen</a>
-                        </div>
-                        
-                    </li>
-                    <li>
-                        <a href="">raseen404@gmail.com</a>
-                    </li>
-                    <a href="#">
-                        <img src="{% static 'images/call.png'%}" alt="">
-                    </a>
-                </ul>
-                <ul>
-                    <li>
-                        <div>
-                            <img src="{% static 'images/profile.jpg'%}" alt="">
-                            <a href="">raseen</a>
-                        </div>
-                        
-                    </li>
-                    <li>
-                        <a href="">raseen404@gmail.com</a>
-                    </li>
-                    <a href="#">
-                        <img src="{% static 'images/call.png'%}" alt="">
-                    </a>
-                </ul>
+                {% endfor %}
             </div>
         </div>
         <section id="right_side">

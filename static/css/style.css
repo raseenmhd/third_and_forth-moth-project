@@ -140,46 +140,48 @@ br.clear {
 #main_page .home .left .file_upload h1 { 
     font-size: 25px;
     color: #fff;
-    margin:  25px 0px;
+    margin:  10px 0px;
+}
+#main_page .home .left .file_upload h2 { 
+    font-size: 17px;
+    color: #fff;
+    margin:  0px 0px 25px 0px;
+    opacity: 0.5;
+}
+#main_page .home .left .file_upload form { 
+    
 }
 
-#main_page .home .left .file_upload .email_input { 
+#main_page .home .left .file_upload form .name { 
     background-color: #fff;
-    padding: 15px ;
+    padding: 20px;
     border-radius: 50px;
+    margin-bottom: 15px;
+}
+#main_page .home .left .file_upload form .name label { 
     font-size: 20px;
-
 }
-
-#main_page .home .left .file_upload .email_input label { 
-    width: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#main_page .home .left .file_upload form .name input { 
+    font-size: 20px;
 }
-#main_page .home .left .file_upload .email_input label img{ 
-    display: block;
-    width: 100%;
-}
-
-#main_page .home .left .file_upload .email_input label #email { 
+#main_page .home .left .file_upload form .email_input { 
     background-color: #fff;
-    margin-left: 20px;
-    font-size: 22px;
+    padding: 20px;
+    border-radius: 50px;
+    margin-bottom: 15px;
+}
+
+#main_page .home .left .file_upload form .email_input label { 
+    font-size: 20px;
+}
+#main_page .home .left .file_upload form .email_input input { 
+    font-size: 20px;
 }
 
 #main_page .home .left .file_upload .file_upload { 
     margin:  25px 0px;
     color: #fff;
     font-size: 18px;
-}
-
-#main_page .home .left .file_upload .file_upload label { 
-
-}
-
-#main_page .home .left .file_upload .file_upload #file { 
-
 }
 
 #main_page .home .left .file_upload .submit_button { 
@@ -221,12 +223,14 @@ br.clear {
 }
 
 header { 
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
     background-color: #ff7e6b;
-   ;
 }
 
 header h1 { 
@@ -304,6 +308,10 @@ header nav ul li a {
     font-family: 'GT-Eesti1';
     font-size: 20px;
 }
+header nav ul li a:hover { 
+    color: #000;
+    font-family: 'GT-Eesti3';
+}
 header nav ul li a img {
     display: block;
     width: 100%;
@@ -369,6 +377,7 @@ header div ul li a {
     display: block;
     width: 15%;
     margin-right: 25px;
+    border-radius: 30px;
 }
 
 #contact .contact_table .heading ul li a { 
@@ -390,6 +399,10 @@ header div ul li a {
     width: 40%;
     text-align: center;
     padding: 100px 35px;
+    position: fixed;
+    top: 70px;
+    right: 25px;
+    width: 35%;
 }
 
 #right_side .profile { 
@@ -400,6 +413,7 @@ header div ul li a {
 #right_side .profile img { 
     display: block;
     width: 100%;
+    border-radius: 100px;
 }
 
 #right_side h2 { 
