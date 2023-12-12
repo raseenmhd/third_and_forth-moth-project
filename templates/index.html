@@ -13,7 +13,7 @@
                 <section class="left">
                     <div class="file_upload">
                         <h1>please upload your contacts file </h1>
-                        <h2>(  file should be in .xlsx format and <br> should contain Name ,Phone and Email columns  )
+                        <h2>(  file should be in .xlsx format and <br> should contain Name ,Phone and Email columns <br>in order )
                         </h2>
                         <form id="Upload_file" method="post" action="{% url 'web:index' %}" enctype="multipart/form-data">
                             {% csrf_token %}

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('selected_user_email').textContent = userEmail;
             document.getElementById('selected_user_phone').textContent = userPhone;
             
-            // Show the selected user details
+            
             selectedUserDetails.style.display = 'block';
         });
     });
